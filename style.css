@@ -1,0 +1,154 @@
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --accent-dark: #1d4ed8;
+    --border: #dbe4f0;
+    --success: #166534;
+    --error: #b91c1c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
+    color: var(--text);
+}
+
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    margin-bottom: 8px;
+}
+
+.hero p {
+    color: var(--muted);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    background: var(--accent);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-1px);
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    margin-bottom: 18px;
+}
+
+.status {
+    margin: 16px 0;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #e0ecff;
+    color: #1e3a8a;
+    border: 1px solid #bfd3ff;
+}
+
+.status.success {
+    background: #dcfce7;
+    color: var(--success);
+    border-color: #bbf7d0;
+}
+
+.status.error {
+    background: #fee2e2;
+    color: var(--error);
+    border-color: #fecaca;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+}
+
+.list-container {
+    display: grid;
+    gap: 12px;
+}
+
+.breed-card,
+.group-card {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    background: #fbfdff;
+}
+
+.breed-card h3,
+.group-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.breed-card p,
+.group-card p,
+#breed-details p,
+#fact-container p {
+    margin: 6px 0;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 4px 8px;
+    border-radius: 999px;
+    background: #e5edff;
+    color: #1d4ed8;
+    font-size: 0.85rem;
+}
+
+.small-btn {
+    margin-top: 10px;
+}
+
+.loading {
+    color: var(--muted);
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    .app {
+        padding: 16px;
+    }
+    button {
+        width: 100%;
+    }
+}

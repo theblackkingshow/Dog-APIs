@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="app">
+        <header class="hero">
+            <h1>🐶 Dog Explorer</h1>
+            <p>Explore dog breeds, random facts, and breed groups using async JavaScript.</p>
+        </header>
+
+        <section class="controls card">
+            <button id="load-breeds-btn">Load Breeds</button>
+            <button id="dog-fact-btn">Get Dog Fact</button>
+            <button id="load-groups-btn">Load Groups</button>
+        </section>
+
+        <section id="status" class="status" aria-live="polite">Ready to explore dogs.</section>
+
+        <section class="grid">
+            <section class="card">
+                <h2>📚 Dog Facts</h2>
+                <div id="fact-container">
+                    <p>Click <strong>Get Dog Fact</strong> to see a random fact.</p>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2>🔎 Breed Details</h2>
+                <div id="breed-details">
+                    <p>Select a breed to view more information.</p>
+                </div>
+            </section>
+        </section>
+
+        <section class="card">
+            <h2>🐾 Breeds</h2>
+            <div id="breeds-container" class="list-container">
+                <p>Click <strong>Load Breeds</strong> to fetch dog breeds.</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>🏷️ Dog Groups</h2>
+            <div id="groups-container" class="list-container">
+                <p>Click <strong>Load Groups</strong> to fetch dog groups.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
